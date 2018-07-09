@@ -7,8 +7,8 @@
 
 <div class="row">
     <div class="col-sm-4">
-        {% thumbnail contacto.image "100x100" crop="center" as im %}
-            <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+        {% thumbnail contacto.imagen "400x400" crop="center" as im %}
+            <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}"  class="img-fluid text-center mt-2">
         {% endthumbnail %}
     </div>
     <div class="col-sm-4">

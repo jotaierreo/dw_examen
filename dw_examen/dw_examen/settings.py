@@ -128,5 +128,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-MEDIA_URL = "/imagenes/"
-MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR),"imagenes/")
+MEDIA_URL = "/dw_examen/imagenes/"
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR),"dw_examen/imagenes/")

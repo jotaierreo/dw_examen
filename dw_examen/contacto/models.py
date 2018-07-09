@@ -1,4 +1,5 @@
 from django.db import models
+from sorl.thumbnail import ImageField
 
 class Contacto(models.Model):
     nombre = models.CharField(max_length=50)
