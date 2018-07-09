@@ -15,7 +15,7 @@
         <h3>Información de contacto</h3>
         <ul>
             <li><span class="font-weight-bold">Nombre: </span> <span>{{contacto.nombre}}</span></li>
-            <li><span class="font-weight-bold">Email: </span> <span>{{contacto.email}}</span></li>
+            <li><span class="font-weight-bold">Email: </span> <span><a href="mailto:{{contacto.email}}">{{contacto.email}}</a></span></li>
             <li><span class="font-weight-bold">Tel: </span> <span>{{contacto.telefono}}</span></li>
             <li><span class="font-weight-bold">Dirección: </span> <span>{{contacto.direccion}}</span></li>
         </ul>
@@ -37,13 +37,13 @@
             </form>
     </div>
     <div class="col-sm-4">
-        <iframe
-            width="600"
-            height="450"
-            frameborder="0" style="border:0"
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAhUxonjQzDi-GaRGN-d3_Jjc-XMXiO0bU
-              &q={{contacto.direccion}}" allowfullscreen>
-          </iframe>
+        <div class="mt-2 embed-responsive embed-responsive-4by3">
+            <iframe
+                class="embed-responsive-item"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.554717469931!2d-70.61730368424517!3d-33.434851604099315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf7957b1acbd%3A0xbba69aca6d21dfba!2sAntonio+Varas+858-798%2C+Providencia%2C+Regi%C3%B3n+Metropolitana!5e0!3m2!1ses!2scl!4v1531113524106" allowfullscreen>
+              </iframe>
+        </div>
+        
     </div>
 </div>
 {% endblock %}

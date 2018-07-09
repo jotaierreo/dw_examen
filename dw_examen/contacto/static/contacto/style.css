@@ -9,10 +9,6 @@ nav .active{
     background-color: black;
 }
 
-ul li a{
-    color: white;
-}
-
 .linea{
     background-color: gray;
     height: 10px;
