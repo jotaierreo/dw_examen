@@ -1,13 +1,40 @@
+{% extends "contacto/base.html" %}
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'contacto/style.css' %}" />
 
-<h1>contactos</h1>
-{% if contactos %}
-    <ul>
-    {% for contacto in contactos %}
-        <li><a href="{% url 'contacto:detail' contacto.id %}">{{ contacto.nombre }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No polls are available.</p>
-{% endif %}
+{% block title %}Contactos Info{% endblock %}
+
+{% block content %}
+    <img src="{% static 'contacto/img/meeting.jpg' %}" class="img-fluid text-center mt-2"  alt="banner">
+
+    <h1 class="h1 mt-2">Contactos <small>ICINF</small></h1>
+    
+    {% if contactos %}
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Teléfono</th>
+                <th scope="col">Acción</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for contacto in contactos %}
+                    <tr>
+                        <th scope="row">{{ contacto.id }}</th>
+                        <td><a href="{% url 'contacto:detail' contacto.id %}">{{ contacto.nombre }}</a></td>
+                        <td>{{ contacto.apellido }}</td>
+                        <td>{{ contacto.telefono }}</td>
+                        <td><a href="{% url 'contacto:detail' contacto.id %}"><button class="btn btn-primary">Ver Detalle</button></a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+        <p>No hay usuarios registrados :(</p>
+    {% endif %}
+
+{% endblock %}
