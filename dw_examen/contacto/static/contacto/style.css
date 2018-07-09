@@ -4,6 +4,11 @@ body, html {
 .bg-dark {
     background-color: #231f1f !important;;
 }
+
+nav .active{
+    background-color: black;
+}
+
 ul li a{
     color: white;
 }
