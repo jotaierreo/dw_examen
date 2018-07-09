@@ -1,0 +1,13 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'contacto/style.css' %}" />
+
+<h1>contactos</h1>
+{% if contactos %}
+    <ul>
+    {% for contacto in contactos %}
+        <li><a href="{% url 'contacto:detail' contacto.id %}">{{ contacto.nombre }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
